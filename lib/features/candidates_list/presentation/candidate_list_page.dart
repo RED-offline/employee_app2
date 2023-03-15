@@ -17,7 +17,7 @@ class CandidateListPage extends StatelessWidget {
             child: Text('Hello world'),
           ),
           floatingActionButton: FloatingActionButton(
-            onPressed: null,
+            onPressed: context.read<CandidateListCubit>().loadInitialData,
             child: const Icon(Icons.refresh),
           ),
         );
