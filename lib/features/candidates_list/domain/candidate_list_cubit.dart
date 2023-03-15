@@ -6,9 +6,11 @@ import 'package:meta/meta.dart';
 part 'candidate_list_state.dart';
 
 class CandidateListCubit extends Cubit<CandidateListState> {
-  CandidateListCubit() : super(CandidateListInitial());
+  CandidateListCubit() : super(CandidateListInitial()) {
+    loadInitialData();
+  }
 
-  void updateList() {
+  void loadInitialData() {
     print('updated');
   }
 }

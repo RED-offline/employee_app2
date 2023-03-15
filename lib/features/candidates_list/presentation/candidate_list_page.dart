@@ -9,7 +9,6 @@ class CandidateListPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<CandidateListCubit, CandidateListState>(
       builder: (context, state) {
-        final cubit = BlocProvider.of<CandidateListCubit>(context);
         return Scaffold(
           appBar: AppBar(
             title: const Text('Candidates Page'),
@@ -18,7 +17,7 @@ class CandidateListPage extends StatelessWidget {
             child: Text('Hello world'),
           ),
           floatingActionButton: FloatingActionButton(
-            onPressed: cubit.updateList,
+            onPressed: null,
             child: const Icon(Icons.refresh),
           ),
         );

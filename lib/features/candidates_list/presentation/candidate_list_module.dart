@@ -8,11 +8,9 @@ class CandidateListModule extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: BlocProvider(
-        create: (_) => CandidateListCubit(),
-        child: const CandidateListPage(),
-      ),
+    return BlocProvider(
+      create: (_) => CandidateListCubit()..loadInitialData(),
+      child: const CandidateListPage(),
     );
   }
 }
