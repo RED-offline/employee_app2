@@ -14,7 +14,7 @@ class CandidateListWidget extends StatelessWidget {
       builder: (context, state) {
         return Scaffold(
           appBar: AppBar(
-            title: Text(l10n.counterAppBarTitle),
+            title: Text(l10n.appBarTitle),
           ),
           body: Center(
             child: Text(l10n.bodyText),

@@ -1,5 +1,5 @@
 {
     "@@locale": "en",
-    "counterAppBarTitle": "Candidates Page",
+    "appBarTitle": "Candidates Page",
     "bodyText": "Hello world!"
 }
