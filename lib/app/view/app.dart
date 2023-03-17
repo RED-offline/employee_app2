@@ -10,7 +10,6 @@ class App extends StatelessWidget {
     return const MaterialApp(
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      locale: Locale('uk'),
       home: CandidateListModule(),
     );
   }
