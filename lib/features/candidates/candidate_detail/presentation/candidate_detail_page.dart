@@ -4,7 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class CandidateDetailPage extends StatelessWidget {
-  const CandidateDetailPage({super.key});
+  const CandidateDetailPage({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
