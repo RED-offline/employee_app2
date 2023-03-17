@@ -1,4 +1,4 @@
-import 'package:employee_app2/features/candidates_list/domain/candidate_list_cubit.dart';
+import 'package:employee_app2/features/candidates/candidates_list/domain/candidate_list_cubit.dart';
 import 'package:employee_app2/l10n/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
