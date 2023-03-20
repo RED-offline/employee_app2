@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:employee_app2/features/candidates/candidate_detail/domain/candidate_detail_cubit.dart';
 import 'package:employee_app2/l10n/l10n.dart';
 import 'package:flutter/cupertino.dart';
@@ -7,8 +8,11 @@ import 'package:go_router/go_router.dart';
 
 class CandidateDetailWidget extends StatelessWidget {
   const CandidateDetailWidget({
+    required this.indexW,
     super.key,
   });
+
+  final String indexW;
 
   @override
   Widget build(BuildContext context) {
@@ -27,10 +31,18 @@ class CandidateDetailWidget extends StatelessWidget {
           body: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
-                Icon(Icons.home),
-                Text('Candidate'),
-                Text('Position'),
+              children: [
+                Hero(
+                  tag: 'avatar $indexW',
+                  child: CachedNetworkImage(
+                    width: 300,
+                    height: 400,
+                    imageUrl:
+                        'https://i.pinimg.com/564x/7f/ae/ce/7faece91804512c0f95a122bdc3a3324.jpg',
+                  ),
+                ),
+                const Text('Candidate'),
+                const Text('Position'),
               ],
             ),
           ),

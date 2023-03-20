@@ -5,14 +5,17 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 class CandidateDetailPage extends StatelessWidget {
   const CandidateDetailPage({
+    required this.index,
     super.key,
   });
+
+  final String index;
 
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (_) => CandidateDetailCubit(),
-      child: const CandidateDetailWidget(),
+      child: CandidateDetailWidget(indexW: index),
     );
   }
 }
