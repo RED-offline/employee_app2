@@ -8,11 +8,11 @@ import 'package:go_router/go_router.dart';
 
 class CandidateDetailWidget extends StatelessWidget {
   const CandidateDetailWidget({
-    required this.indexW,
+    required this.index,
     super.key,
   });
 
-  final String indexW;
+  final String index;
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +33,7 @@ class CandidateDetailWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Hero(
-                  tag: 'avatar $indexW',
+                  tag: 'avatar $index',
                   child: CachedNetworkImage(
                     width: 300,
                     height: 400,

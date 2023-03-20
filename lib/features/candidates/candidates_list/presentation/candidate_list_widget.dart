@@ -2,6 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:employee_app2/features/candidates/candidates_list/domain/candidate_list_cubit.dart';
 import 'package:employee_app2/l10n/l10n.dart';
 import 'package:employee_app2/routes/app_routes.dart';
+import 'package:employee_app2/routes/router_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
@@ -23,8 +24,8 @@ class CandidateListWidget extends StatelessWidget {
             itemBuilder: (context, index) {
               return GestureDetector(
                 onTap: () => context.pushNamed(
-                  AppRouter.candidateDetailPage.substring(1),
-                  params: {'index': (index + 1).toString()},
+                  AppPage.candidateDetailPage.toName,
+                  params: {'tempIndex': (index + 1).toString()},
                 ),
                 child: Card(
                   elevation: 15,
