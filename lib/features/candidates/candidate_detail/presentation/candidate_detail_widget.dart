@@ -8,11 +8,33 @@ import 'package:go_router/go_router.dart';
 
 class CandidateDetailWidget extends StatelessWidget {
   const CandidateDetailWidget({
-    required this.index,
     super.key,
+    required this.id,
+    required this.uid,
+    required this.password,
+    required this.firstName,
+    required this.lastName,
+    required this.username,
+    required this.email,
+    required this.avatar,
+    required this.gender,
+    required this.phoneNumber,
+    required this.socialInsuranceNumber,
+    required this.dateOfBirth,
   });
 
-  final String index;
+  final String id;
+  final String uid;
+  final String password;
+  final String firstName;
+  final String lastName;
+  final String username;
+  final String email;
+  final String avatar;
+  final String gender;
+  final String phoneNumber;
+  final String socialInsuranceNumber;
+  final String dateOfBirth;
 
   @override
   Widget build(BuildContext context) {
@@ -32,17 +54,22 @@ class CandidateDetailWidget extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Hero(
-                  tag: 'avatar $index',
-                  child: CachedNetworkImage(
-                    width: 300,
-                    height: 400,
-                    imageUrl:
-                        'https://i.pinimg.com/564x/7f/ae/ce/7faece91804512c0f95a122bdc3a3324.jpg',
-                  ),
+                CachedNetworkImage(
+                  width: 300,
+                  height: 400,
+                  imageUrl: avatar,
                 ),
-                const Text('Candidate'),
-                const Text('Position'),
+                Text('Name: $firstName $lastName'),
+                Text('ID: $id'),
+                Text('UID: $uid'),
+                Text('Password: $password'),
+                Text('Username: $username'),
+                Text('email: $email'),
+                Text('avatar: $avatar'),
+                Text('gender: $gender'),
+                Text('phoneNumber: $phoneNumber'),
+                Text('socialInsuranceNumber: $socialInsuranceNumber'),
+                Text('dateOfBirth: $dateOfBirth'),
               ],
             ),
           ),

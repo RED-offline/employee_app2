@@ -10,7 +10,7 @@ class CandidateListPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (_) => CandidateListCubit(),
-      child: const CandidateListWidget(),
+      child: CandidateListWidget(),
     );
   }
 }

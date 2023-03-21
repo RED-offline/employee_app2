@@ -14,13 +14,26 @@ class AppRouter {
   }
 
   static final String candidateDetailPageWithParams =
-      '${AppPage.candidateDetailPage.toPath}/:tempIndex';
+      '${AppPage.candidateDetailPage.toPath}/:id/:uid/:firstName/:lastName/:username/:password/:email/:avatar/:gender/:phoneNumber/:socialInsuranceNumber/:dateOfBirth';
 
   static Widget _candidateDetailPageBuilder(
     BuildContext context,
     GoRouterState state,
   ) {
-    return CandidateDetailPage(tempIndex: state.params['tempIndex']!);
+    return const CandidateDetailPage(
+      id: 'id',
+      uid: 'uid',
+      firstName: 'firstName',
+      lastName: 'lastName',
+      username: 'username',
+      password: 'password',
+      email: 'email',
+      avatar: 'avatar',
+      gender: 'gender',
+      phoneNumber: 'phoneNumber',
+      socialInsuranceNumber: 'socialInsuranceNumber',
+      dateOfBirth: 'dateOfBirth',
+    );
   }
 
   static Widget errorWidget(BuildContext context, GoRouterState state) =>
