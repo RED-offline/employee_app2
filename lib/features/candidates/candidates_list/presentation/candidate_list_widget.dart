@@ -1,8 +1,9 @@
+// ignore_for_file: lines_longer_than_80_chars, must_be_immutable
+
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:employee_app2/features/candidates/candidates_list/domain/candidate_list_cubit.dart';
 import 'package:employee_app2/l10n/l10n.dart';
 import 'package:employee_app2/models/candidate.dart';
-import 'package:employee_app2/routes/app_routes.dart';
 import 'package:employee_app2/routes/router_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -87,7 +88,8 @@ class CandidateListWidget extends StatelessWidget {
                       ),
                     ),
                     title: Text(
-                        '${candidateList[index].firstName} ${candidateList[index].lastName}'),
+                      '${candidateList[index].firstName} ${candidateList[index].lastName}',
+                    ),
                     subtitle: Text(candidateList[index].email),
                   ),
                 ),

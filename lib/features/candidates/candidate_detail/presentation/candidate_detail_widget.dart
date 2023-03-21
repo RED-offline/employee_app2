@@ -8,7 +8,6 @@ import 'package:go_router/go_router.dart';
 
 class CandidateDetailWidget extends StatelessWidget {
   const CandidateDetailWidget({
-    super.key,
     required this.id,
     required this.uid,
     required this.password,
@@ -21,6 +20,7 @@ class CandidateDetailWidget extends StatelessWidget {
     required this.phoneNumber,
     required this.socialInsuranceNumber,
     required this.dateOfBirth,
+    super.key,
   });
 
   final String id;

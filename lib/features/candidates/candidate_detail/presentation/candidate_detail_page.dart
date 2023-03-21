@@ -38,18 +38,19 @@ class CandidateDetailPage extends StatelessWidget {
     return BlocProvider(
       create: (_) => CandidateDetailCubit(),
       child: CandidateDetailWidget(
-          id: id,
-          uid: uid,
-          password: password,
-          firstName: firstName,
-          lastName: lastName,
-          username: username,
-          email: email,
-          avatar: avatar,
-          gender: gender,
-          phoneNumber: phoneNumber,
-          socialInsuranceNumber: socialInsuranceNumber,
-          dateOfBirth: dateOfBirth),
+        id: id,
+        uid: uid,
+        password: password,
+        firstName: firstName,
+        lastName: lastName,
+        username: username,
+        email: email,
+        avatar: avatar,
+        gender: gender,
+        phoneNumber: phoneNumber,
+        socialInsuranceNumber: socialInsuranceNumber,
+        dateOfBirth: dateOfBirth,
+      ),
     );
   }
 }

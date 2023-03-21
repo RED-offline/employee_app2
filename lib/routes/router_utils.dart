@@ -1,3 +1,5 @@
+// ignore_for_file: no_default_cases
+
 enum AppPage {
   root,
   candidateDetailPage,
